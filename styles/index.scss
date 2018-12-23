@@ -1,0 +1,61 @@
+@import './_reset.scss';
+@import './_common.scss';
+
+.mian{
+    // overflow: scroll;
+    width: 100%;
+    height: 100%;
+    //background-color: green;
+    overflow: scroll;
+    .nav{
+        div{
+            float: left;
+           // background-color: yellow;
+            width: 25%;
+            padding: 10px;
+            img{
+                width: 100%;
+            }
+        }
+    }
+    /* 商品列表 */
+    .goodslist{
+        //background-color: pink;
+        padding: 3px 8px;
+        
+        >img{
+            height: 45px;
+            width: 100%;
+        }
+        .good_content{
+            float: left;
+            width: 49%;
+            //background-color: green;
+            margin-bottom: 5px;
+            img{
+                width: 100%;
+            }
+            p{
+                color: #333;
+            }
+            span{
+                display: block;
+                flex-shrink: 16px;
+                color: #ff2b37;
+            }
+            a{
+                margin: 0 auto;
+                display: block;
+                width: 150px;
+                background-color: #0da7ff;
+                color: white;
+                
+            }
+        }
+        .good_content:nth-of-type(2n){
+            //background-color: pink;     
+            float: right;
+        }
+    }
+
+}

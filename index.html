@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <link rel="stylesheet" href="./lib/fontawesome/css/font-awesome.css">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>pyg</title>
+</head>
+
+<body>
+    <header>
+        <div class="mui-input-row mui-search">
+            <input type="search" class="mui-input-clear" placeholder="">
+        </div>
+    </header>
+    <div class="mian">
+        <!-- 轮播图 -->
+        <div class="mui-slider" id="mui_slider">
+        </div>
+        <!-- 分類導航 -->
+        <div class="nav">
+            <div></div>
+        </div>
+        <!-- 商品列表 -->
+        <div class="content">
+                <div class="goodslist clearfix">
+                        <img src="http://image4.suning.cn/uimg/cms/img/149559219946350066.png" alt="">
+                        <div class="good_content ">
+                            <img src="http://image1.suning.cn/uimg/b2c/newcatentries/0070061826-000000000189657556_2_400x400.jpg" alt="">
+                            <p>dfdafsfasfasfasf</p>
+                            <span>￥00</span>
+                            <a href="javascript:" class="mui-btn">找相似</a>
+                        </div>      
+                        <div class="good_content">
+                            <img src="http://image1.suning.cn/uimg/b2c/newcatentries/0070061826-000000000189657556_2_400x400.jpg" alt="">
+                            <p>dfasdfasdfasfassf</p>
+                            <span>￥00</span>
+                            <a href="javascript:" class="mui-btn">找相似</a>
+                        </div>      
+                        <div class="good_content">
+                            <img src="http://image1.suning.cn/uimg/b2c/newcatentries/0070061826-000000000189657556_2_400x400.jpg" alt="">
+                            <p>dfasdfasdfasfassf</p>
+                            <span>￥00</span>
+                            <a href="javascript:" class="mui-btn">找相似</a>
+                        </div>      
+                        <div class="good_content">
+                            <img src="http://image1.suning.cn/uimg/b2c/newcatentries/0070061826-000000000189657556_2_400x400.jpg" alt="">
+                            <p>dfasdfasdfasfassf</p>
+                            <span>￥00</span>
+                            <a href="javascript:" class="mui-btn">找相似</a>
+                        </div>      
+                        <div class="good_content">
+                            <img src="http://image1.suning.cn/uimg/b2c/newcatentries/0070061826-000000000189657556_2_400x400.jpg" alt="">
+                            <p>dfasdfasdfasfassf</p>
+                            <span>￥00</span>
+                            <a href="javascript:" class="mui-btn">找相似</a>
+                        </div>      
+                 </div>
+        </div>
+        <footer>
+            <a href="javascript:">
+                <span class="mui-icon mui-icon-contact mui-icon-icon-contact"></span>
+                <span>首页</span>
+            </a>
+            <a href="javascript:">
+                <span class="mui-icon mui-icon-list"></span>
+                <span>首页</span>
+            </a>
+            <a href="javascript:">
+                <span class="mui-icon mui-icon-eye"></span>
+                <span>首页</span>
+            </a>
+            <a href="javascript:">
+                <span class="mui-icon mui-icon-contact mui-icon-icon-contact-filled"></span>
+                <span>首页</span>
+            </a>
+        </footer>
+
+
+        <!-- 輪播圖模板 -->
+    <script type="text/template" id='slider_temp'>
+        <div class="mui-slider-group mui-slider-loop">
+                <!--支持循环，需要重复图片节点-->
+                <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="{{$data[$data.length-1].image_src}}" /></a></div>
+                {{each $data value}}
+                <div class="mui-slider-item"><a href="#"><img src="{{value.image_src}}" /></a></div>
+                <!--支持循环，需要重复图片节点-->
+                {{/each}}
+                <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="{{$data[0].image_src}}" /></a></div>
+            </div>
+            <div class="mui-slider-indicator">
+                {{each $data value}}
+                <div class="mui-indicator"></div>
+                {{/each}}
+                
+            </div>
+    </script>
+
+    <script type="text/template" id='nav_temp'>
+        {{each $data value}}
+        <div><a href="javascript:"></a><img src="{{value.image_src}}" alt=""></div>
+        {{/each}}
+    </script>
+
+    <!--  -->
+    <script type="text/template" id='goods_temp'>
+        {{each $data value}}
+        <div class="goodslist clearfix">
+                <img src="{{value.group_img}}" alt="">
+                {{each value.goods values}}
+                <div class="good_content ">
+                    <img src="{{values.goods_small_logo}}" alt="">
+                    <p class='mui-ellipsis-2'>{{values.goods_name}}</p>
+                    <span>￥{{values.goods_price}}</span>
+                    <a href="javascript:" class="mui-btn">找相似</a>
+                </div>   
+                {{/each}}    
+         </div>
+        {{/each}}
+    </script>
+
+
+
+        <script src="./lib/mui/js/mui.js"></script>
+        <script src="./lib/zepto/zepto.js"></script>
+        <script src="./js/index.js"></script>
+        <script src="./js/_commom.js"></script>
+        <script src="./lib/arttemplate/template-web.js"></script>
+</body>
+
+</html>
