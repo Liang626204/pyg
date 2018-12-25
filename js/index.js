@@ -14,7 +14,8 @@ $(function () {
             if (response.meta.status === 200) {
                 //console.log(13);
                 var html = template('slider_temp',response.data)
-               // console.log(response.data)
+                console.log(response.data)
+             
                 //console.log(html);
                 $("#mui_slider").html(html);
                 gallery.slider({
@@ -45,7 +46,7 @@ $(function () {
            console.log(response.data)
             //console.log(html);
             $(".content").html(html);
-            console.log(html)
+           // console.log(html)
         }
     })   
 })

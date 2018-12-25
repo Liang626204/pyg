@@ -1,4 +1,3 @@
-@charset "UTF-8";
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -108,58 +107,64 @@ footer .content_choosed {
   width: 100%;
   height: 100%;
   overflow: scroll;
-  /* 商品列表 */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.mian .nav div {
-  float: left;
-  width: 25%;
-  padding: 10px;
+.mian .left {
+  width: 100px;
+  height: 100%;
+  overflow: hidden;
 }
 
-.mian .nav div img {
-  width: 100%;
+.mian .left .lists li {
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
 }
 
-.mian .goodslist {
-  padding: 3px 8px;
-}
-
-.mian .goodslist > img {
-  height: 45px;
-  width: 100%;
-}
-
-.mian .goodslist .good_content {
-  float: left;
-  width: 49%;
-  margin-bottom: 5px;
-}
-
-.mian .goodslist .good_content img {
-  width: 100%;
-}
-
-.mian .goodslist .good_content p {
+.mian .left .lists li a {
   color: #333;
 }
 
-.mian .goodslist .good_content span {
-  display: block;
-  -ms-flex-negative: 16px;
-      flex-shrink: 16px;
-  color: #ff2b37;
+.mian .left .lists .ative {
+  background-color: #fff;
+  border-left: 2px solid green;
 }
 
-.mian .goodslist .good_content a {
-  margin: 0 auto;
-  display: block;
-  width: 150px;
-  background-color: #0da7ff;
-  color: white;
+.mian .right {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 100px;
+  height: 100%;
+  overflow: hidden;
 }
 
-.mian .goodslist .good_content:nth-of-type(2n) {
-  float: right;
+.mian .right .right_box .box_title {
+  color: #0094ff;
 }
-/*# sourceMappingURL=index.css.map */
+
+.mian .right .right_box .box_content {
+  background-color: #fff;
+}
+
+.mian .right .right_box .box_content > a {
+  display: block;
+  width: 33.3333%;
+  float: left;
+  padding: 2px 2px;
+  text-align: center;
+}
+
+.mian .right .right_box .box_content > a img {
+  width: 100%;
+}
+
+.mian .right .right_box .box_content > a p {
+  font-size: 14px;
+  color: #333;
+}
+/*# sourceMappingURL=categories.css.map */
