@@ -10,28 +10,28 @@ $(function () {
     // console.log(localdata)
     /* 如果本地储存有数据就用本地的数据 */
     var thistime = Date.now()
-    // if(localdata){
-    //     localdata_ele = JSON.parse(localdata)
-    //     var timer = thistime-localdata_ele.timeStart
-    //     //console.log(timer);
-    //     if(timer<1000){
+    if(localdata){
+        localdata_ele = JSON.parse(localdata)
+        var timer = thistime-localdata_ele.timeStart
+        //console.log(timer);
+        if(timer<10000){
 
-    //         console.log(localdata_ele)
-    //         datas=localdata_ele.datas;
-    //         left_info()
-    //         right_info(0)
-    //     }else{
-    //         localStorage.clear();
-    //         aj()
-    //     }
+            console.log(localdata_ele)
+            datas=localdata_ele.datas;
+            left_info()
+            right_info(0)
+        }else{
+            localStorage.clear();
+            aj()
+        }
       
-    // }else{
-    //     aj()
-    // }
+    }else{
+        aj()
+    }
 
 
   
-    aj();
+    // aj();
 
 
     /* 列表栏 */
