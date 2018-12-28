@@ -1,0 +1,35 @@
+@import './_reset.scss';
+@import './_common.scss';
+form{
+    margin-top: 10px;
+}
+
+/* 验证码 */
+.code{
+    position: relative;
+    >.code_btn{
+        position: absolute;
+        right: 10px;
+        width: 100px;
+        padding: 10px 10px;
+      
+    }
+}
+
+/* 密码 */
+.pwd1{
+    position: relative;
+    span{
+        position: absolute;
+        top: 8px;
+        right: 20px;
+    }
+}
+.pwd2{
+    position: relative;
+    span{
+        position: absolute;
+        top: 8px;
+        right: 20px;
+    }
+}

@@ -21,7 +21,7 @@ $(function () {
             left_info()
             right_info(0)
         }else{
-            localStorage.clear();
+            localStorage.removeItem("localData");
             aj()
         }
       
